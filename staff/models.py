@@ -24,6 +24,7 @@ class Position(models.Model):
 
 class Area(models.Model):
     city = models.CharField('地区', max_length=20)
+    #自关联的字段外键指向自己，用self
     parent = models.ForeignKey(self, on_delete=models.SET_NULL, null=True, blank=True, verbose_name='上一级行政区', related_name='subs')
 
     def __str__(self):
