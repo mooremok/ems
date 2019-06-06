@@ -19,5 +19,5 @@ class AreaAdmin(admin.ModelAdmin):
 
 @admin.register(Employee)
 class EmpoyeeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'department', 'sex', 'birthday', 'phone', 'status', 'entry')
+    list_display = ('id', 'name', 'department', 'position', 'sex', 'birthday', 'hometown', 'phone', 'status', 'entry')
     list_display_links = ('id', 'name')
